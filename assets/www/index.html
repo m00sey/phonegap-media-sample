@@ -75,8 +75,12 @@
         if (my_media) {
         my_media.setVolume(0);
         }
-        clearInterval(mediaTimer);
-        mediaTimer = null;
+        }
+
+        function halfAudio() {
+        if (my_media) {
+        my_media.setVolume(0.5);
+        }
         }
 
         // Unmute audio
@@ -85,8 +89,6 @@
         if (my_media) {
         my_media.setVolume(1);
         }
-        clearInterval(mediaTimer);
-        mediaTimer = null;
         }
 
         // onSuccess Callback
@@ -116,7 +118,9 @@
 <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
 <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
 <a href="#" class="btn large" onclick="muteAudio();">Mute Audio</a>
+<a href="#" class="btn large" onclick="halfAudio();">50% Audio</a>
 <a href="#" class="btn large" onclick="unmuteAudio();">Unmute Audio</a>
+
 <p id="audio_position"></p>
 </body>
 </html>
